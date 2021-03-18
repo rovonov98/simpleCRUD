@@ -44,9 +44,9 @@ export default {
    ** Nuxt.js dev-modules
    ** See https://nuxtjs.org/api/configuration-modules/#buildmodules
    */
-  buildModules: [
-    '@nuxtjs/eslint-module',
-  ],
+  // buildModules: [
+  //   '@nuxtjs/eslint-module',
+  // ],
   /*
    ** Nuxt.js modules
    */
