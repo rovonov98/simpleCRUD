@@ -14,6 +14,15 @@ export const mutations = {
         state.dataList = state.dataList.filter((data) => {
             return data._id !== _id
         })
+    },
+    putData(state, data) {
+        const index = state.dataList.findIndex((element) => {
+            if (element._id === data._id) {
+                return element
+            }
+        })
+        state.dataList[index].name = data.name
+        state.dataList[index].age = data.age
     }
 }
 
@@ -37,11 +46,12 @@ export const actions = {
         })
         .then(res => res.json())
         .then(data => {
-            state.commit('postData', {
-                name: item.name,
-                age: item.age,
-                _id: data
-            })
+            // state.commit('postData', {
+            //     name: data.name,
+            //     age: data.age,
+            //     _id: data._id
+            // })
+            state.commit('postData', data)
         })
         .catch(error => console.log(error))
     },
@@ -66,7 +76,7 @@ export const actions = {
         })
         .then(res => res.text())
         .then(() => {
-            state.commit('putData', '')
+            state.commit('putData', data)
         })
     }
 }

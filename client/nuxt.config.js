@@ -44,9 +44,9 @@ export default {
    ** Nuxt.js dev-modules
    ** See https://nuxtjs.org/api/configuration-modules/#buildmodules
    */
-  // buildModules: [
-  //   '@nuxtjs/eslint-module',
-  // ],
+  buildModules: [
+    '@nuxtjs/pwa',
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -55,8 +55,16 @@ export default {
   ],
   /*
    ** Build configuration
+   {
+
    ** See https://nuxtjs.org/api/configuration-build/
    */
+  pwa: {
+    icon: {
+      /* icon options */
+      source: './static/icon.png'
+    }
+  },
   build: {
     /*
     ** You can extend webpack config here

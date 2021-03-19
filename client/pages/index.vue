@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <Table />
       <h2 class="subtitle">MEVN starter template based on Nuxt-js</h2>
       <div class="links">
         <a
