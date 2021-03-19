@@ -45,14 +45,7 @@ export const actions = {
             })
         })
         .then(res => res.json())
-        .then(data => {
-            // state.commit('postData', {
-            //     name: data.name,
-            //     age: data.age,
-            //     _id: data._id
-            // })
-            state.commit('postData', data)
-        })
+        .then(data => {state.commit('postData', data)})
         .catch(error => console.log(error))
     },
     deleteData(state, _id) {
