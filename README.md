@@ -1,2 +1,2 @@
-#To install/start the app
-mevn serve
+# To install/start the app
+# mevn serve
