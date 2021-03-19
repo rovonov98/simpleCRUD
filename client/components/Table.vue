@@ -42,6 +42,7 @@
       <input
         type="text"
         v-model="editing.age"
+        @keyup="editing.age = editing.age.replace(/[^\d]/g,'')"
       >
       </div>
       <button 
