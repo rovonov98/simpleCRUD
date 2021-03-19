@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-      <button @click="check">Check</button>
       <input
        type="text" 
         v-model="newPerson.name">
@@ -98,11 +97,7 @@ export default {
       'deleteData',
       'putData'
     ]),
-    check() {
-      console.log(this.dataList)
-    },
     addHandler() {
-      console.log(this.newPerson)
       this.postData({
         name: this.newPerson.name,
         age: this.newPerson.age
