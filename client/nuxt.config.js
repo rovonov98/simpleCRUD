@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  target: 'server',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -52,6 +52,7 @@ export default {
    */
   modules: [
     // Doc: https://nuxtjs.org/api/configuration-modules/
+    '@nuxtjs/pwa',
   ],
   /*
    ** Build configuration
@@ -63,7 +64,15 @@ export default {
     icon: {
       /* icon options */
       source: './static/icon.png'
-    }
+    },
+    manifest: {
+      lang: 'en',
+      short_name: 'nuxt',
+      name: 'nuxt',
+      start_url: '/',
+      display: 'standalone',
+      theme_color: '#FFFFFF'
+    },
   },
   build: {
     /*
